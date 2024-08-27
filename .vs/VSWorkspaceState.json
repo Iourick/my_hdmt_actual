@@ -1,0 +1,15 @@
+{
+  "OutputFoldersPerTargetSystem": {
+    "Local Machine": [
+      "out\\build\\Linux-Debug",
+      "out\\install\\Linux-Debug",
+      "out\\build\\Linux-Release",
+      "out\\install\\Linux-Release"
+    ]
+  },
+  "ExpandedNodes": [
+    ""
+  ],
+  "SelectedNode": "\\CMakePresets.json",
+  "PreviewInSolutionExplorer": false
+}
