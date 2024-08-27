@@ -1,0 +1,49 @@
+﻿{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 19,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "default",
+      "hidden": true,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/out/build/${presetName}",
+      "installDir": "${sourceDir}/out/install/${presetName}"
+    },
+    {
+      "name": "Linux-Debug",
+      "inherits": "default",
+      "description": "Configure for Debug build",
+      "hidden": false,
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "Linux-Release",
+      "inherits": "default",
+      "description": "Configure for Release build",
+      "hidden": false,
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "Linux-Debug",
+      "configurePreset": "Linux-Debug",
+      "hidden": false,
+      "jobs": 4
+    },
+    {
+      "name": "Linux-Release",
+      "configurePreset": "Linux-Release",
+      "hidden": false,
+      "jobs": 4
+    }
+  ]
+}
